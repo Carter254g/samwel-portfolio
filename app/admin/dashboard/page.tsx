@@ -391,7 +391,7 @@ export default function AdminDashboard() {
                   <label className="text-xs text-muted-foreground uppercase tracking-wider block mb-2">Category for all images</label>
                   <input type="text" placeholder="e.g. landscape, portrait, wedding" value={formData.category || ''} onChange={(e) => setFormData((f: any) => ({ ...f, category: e.target.value }))} className="w-full px-3 py-2 bg-background border border-border rounded text-sm text-foreground mb-4" />
                 </div>
-                <MultiImageUploader folder="portfolio" category={formData.category || ''} onBatchSave={handleBatchSave} />
+                <MultiImageUploader folder={formData.category || 'portfolio'} category={formData.category || ''} onBatchSave={handleBatchSave} />
               </div>
             )}
 

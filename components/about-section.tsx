@@ -39,7 +39,7 @@ export function AboutSection() {
                 With over 5 years of professional photography experience, I have developed a unique eye for capturing moments that matter. My journey began with a passion for visual storytelling and has evolved into a comprehensive portfolio spanning multiple disciplines.
               </p>
               <p>
-                My expertise encompasses portrait, landscape, and commercial photography, each offering a distinct perspective on the world. I believe in the power of light, composition, and timing to create images that resonate on an emotional level.
+                My expertise centers on event and concert photography, from high-profile summits and marathons to festivals and brand activations. I believe in the power of light, timing, and being in the right place at the right moment to capture images that resonate on an emotional level.
               </p>
             </div>
             <div className="grid grid-cols-3 gap-6 pt-8 border-t border-border">

@@ -35,7 +35,7 @@ export function HeroSection() {
               I&apos;M SAMWEL
             </h1>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl">
-              A professional photographer specializing in portrait, landscape, and commercial photography. I would love to share my experience with you.
+              A professional photographer specializing in event and concert coverage, capturing the energy of live moments for brands, organizations, and audiences across Kenya. I would love to share my experience with you.
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <a

@@ -5,23 +5,9 @@ import { Star } from 'lucide-react';
 const testimonials = [
   {
     id: 1,
-    name: 'Sarah & Michael Johnson',
-    role: 'Wedding Couple',
-    content: 'Samwel captured every precious moment of our wedding day with such artistry and professionalism. The photos tell our story beautifully. Highly recommended!',
-    rating: 5,
-  },
-  {
-    id: 2,
-    name: 'Emma Davis',
-    role: 'CEO, Creative Studios',
-    content: 'Outstanding work. The commercial product shots exceeded our expectations. Professional, creative, and delivered on time.',
-    rating: 5,
-  },
-  {
-    id: 3,
-    name: 'James Wilson',
-    role: 'Art Director',
-    content: 'Incredible attention to detail and lighting. Samwel\'s technical expertise combined with artistic vision makes him a top-tier photographer.',
+    name: 'Maxwel Mululu',
+    role: 'CTO, Xpose Limited',
+    content: 'Samwel has been our go-to photographer for major events, from Blankets & Wine October Fest to the Standard Chartered Marathon and Africa Tech Summit. His ability to capture the energy of large, high-profile crowds while staying sharp on the key moments is exactly why we keep bringing him back.',
     rating: 5,
   },
 ];
@@ -48,7 +34,7 @@ export function TestimonialsSection() {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 max-w-xl gap-8">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}

@@ -1,5 +1,8 @@
 'use client';
 
+import { useState } from 'react';
+import { ArrowRight } from 'lucide-react';
+
 const portfolioItems = [
   { id: 1, title: 'Live Event Coverage', category: 'events', image_url: '/images/portfolio/event-01.jpg' },
   { id: 2, title: 'Live Event Coverage', category: 'events', image_url: '/images/portfolio/event-02.jpg' },
@@ -72,6 +75,8 @@ const sliderItems = portfolioItems.filter((item) => sliderIds.includes(item.id))
 const sliderLoop = [...sliderItems, ...sliderItems]; // duplicate for seamless loop
 
 export function PortfolioSection() {
+  const [showAll, setShowAll] = useState(false);
+
   return (
     <section id="portfolio" className="py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -108,24 +113,36 @@ export function PortfolioSection() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {portfolioItems.map((item) => (
-            <div key={item.id} className="group relative overflow-hidden cursor-pointer bg-card">
-              <img
-                src={item.image_url}
-                alt={item.title}
-                loading="lazy"
-                className="w-full h-96 object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">{item.category}</p>
-                  <h3 className="text-lg font-bold text-foreground">{item.title}</h3>
+        {!showAll ? (
+          <div className="flex justify-center">
+            <button
+              onClick={() => setShowAll(true)}
+              className="inline-flex items-center gap-3 px-8 py-3 border border-foreground text-foreground hover:bg-foreground hover:text-background transition-colors uppercase text-xs tracking-[0.2em] font-medium"
+            >
+              My Work
+              <ArrowRight className="w-3.5 h-3.5" />
+            </button>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {portfolioItems.map((item) => (
+              <div key={item.id} className="group relative overflow-hidden cursor-pointer bg-card">
+                <img
+                  src={item.image_url}
+                  alt={item.title}
+                  loading="lazy"
+                  className="w-full h-96 object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">{item.category}</p>
+                    <h3 className="text-lg font-bold text-foreground">{item.title}</h3>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
 
       <style>{`

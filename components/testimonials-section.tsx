@@ -10,6 +10,13 @@ const testimonials = [
     content: 'Samwel has been our go-to photographer for major events, from Blankets & Wine, October Fest, The Standard Chartered Marathon and Africa Tech Summit. His ability to capture the energy of large, high-profile crowds while staying sharp on the key moments is exactly why we keep bringing him back.',
     rating: 5,
   },
+  {
+    id: 2,
+    name: 'Charles Mabwa',
+    role: 'CMO, Binance EA',
+    content: 'Samwel covered our Binance event with real precision, capturing the atmosphere and key moments perfectly. Professional, reliable, and easy to work with from start to finish.',
+    rating: 5,
+  },
 ];
 
 export function TestimonialsSection() {
@@ -34,7 +41,7 @@ export function TestimonialsSection() {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 max-w-xl gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 max-w-4xl gap-8">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}

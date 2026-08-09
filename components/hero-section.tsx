@@ -17,7 +17,7 @@ export function HeroSection() {
             <img
               src={heroImage}
               alt="SAMWEL - Professional Photographer"
-              className="w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-500"
+              className="w-full h-auto object-cover [@media(hover:hover)]:grayscale [@media(hover:hover)]:hover:grayscale-0 transition-all duration-500"
             />
             <div className="absolute top-4 left-4 text-xs font-mono uppercase tracking-[0.3em] text-foreground bg-background/70 backdrop-blur px-3 py-1.5">
               Est. 2020

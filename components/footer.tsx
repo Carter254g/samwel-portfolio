@@ -3,7 +3,7 @@
 import { Instagram, Twitter, Linkedin, Mail } from 'lucide-react';
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
+  const currentYear = 2021;
 
   return (
     <footer className="bg-card border-t border-border">

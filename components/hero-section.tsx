@@ -1,23 +1,12 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 
-const DEFAULT_HERO_IMAGE = 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&h=700&fit=crop';
+const DEFAULT_HERO_IMAGE = '/images/hero/profile.jpg';
 
 export function HeroSection() {
-  const [heroImage, setHeroImage] = useState(DEFAULT_HERO_IMAGE);
-
-  useEffect(() => {
-    fetch('/api/photographer')
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.photographer?.hero_image_url) {
-          setHeroImage(data.photographer.hero_image_url);
-        }
-      })
-      .catch(() => {});
-  }, []);
+  const [heroImage] = useState(DEFAULT_HERO_IMAGE);
 
   return (
     <section id="home" className="pt-24 min-h-screen bg-background">

@@ -1,22 +1,11 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
-const DEFAULT_ABOUT_IMAGE = 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&h=600&fit=crop';
+const DEFAULT_ABOUT_IMAGE = '/images/about/profile.jpg';
 
 export function AboutSection() {
-  const [aboutImage, setAboutImage] = useState(DEFAULT_ABOUT_IMAGE);
-
-  useEffect(() => {
-    fetch('/api/photographer')
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.photographer?.about_image_url) {
-          setAboutImage(data.photographer.about_image_url);
-        }
-      })
-      .catch(() => {});
-  }, []);
+  const [aboutImage] = useState(DEFAULT_ABOUT_IMAGE);
 
   return (
     <section id="about" className="py-24 bg-card border-y border-border">

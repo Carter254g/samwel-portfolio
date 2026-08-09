@@ -17,6 +17,13 @@ const testimonials = [
     content: 'Samwel covered our Binance event with real precision, capturing the atmosphere and key moments perfectly. Professional, reliable, and easy to work with from start to finish.',
     rating: 5,
   },
+  {
+    id: 3,
+    name: 'Florence',
+    role: 'Country Sales and Marketing President, Yellowcard',
+    content: 'We brought Samwel on for a marketing campaign event and he delivered exactly what we needed. Sharp, professional imagery that captured the campaign perfectly.',
+    rating: 5,
+  },
 ];
 
 export function TestimonialsSection() {
@@ -41,7 +48,7 @@ export function TestimonialsSection() {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 max-w-4xl gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}

@@ -1,6 +1,6 @@
 'use client';
 
-import { Instagram, Twitter, Linkedin, Mail } from 'lucide-react';
+import { Instagram, Mail } from 'lucide-react';
 
 export function Footer() {
   const currentYear = 2021;
@@ -90,20 +90,6 @@ export function Footer() {
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-5 h-5" />
               </a>
               <a
                 href="mailto:obarasamwel48@gmail.com"

@@ -1,6 +1,6 @@
 'use client';
 
-import { Instagram, Mail } from 'lucide-react';
+
 
 export function Footer() {
   const currentYear = 2021;
@@ -76,29 +76,11 @@ export function Footer() {
 
         {/* Divider */}
         <div className="border-t border-border py-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex justify-center">
             {/* Copyright */}
             <p className="text-muted-foreground text-sm">
               © {currentYear} SAMWEL Photography. All rights reserved.
             </p>
-
-            {/* Social Links */}
-            <div className="flex gap-4">
-              <a
-                href="#"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="mailto:obarasamwel48@gmail.com"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-                aria-label="Email"
-              >
-                <Mail className="w-5 h-5" />
-              </a>
-            </div>
           </div>
         </div>
       </div>

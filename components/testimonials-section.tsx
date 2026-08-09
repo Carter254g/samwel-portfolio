@@ -7,7 +7,7 @@ const testimonials = [
     id: 1,
     name: 'Maxwel Mululu',
     role: 'CTO, Xpose Limited',
-    content: 'Samwel has been our go-to photographer for major events, from Blankets & Wine October Fest to the Standard Chartered Marathon and Africa Tech Summit. His ability to capture the energy of large, high-profile crowds while staying sharp on the key moments is exactly why we keep bringing him back.',
+    content: 'Samwel has been our go-to photographer for major events, from Blankets & Wine, October Fest, The Standard Chartered Marathon and Africa Tech Summit. His ability to capture the energy of large, high-profile crowds while staying sharp on the key moments is exactly why we keep bringing him back.',
     rating: 5,
   },
 ];

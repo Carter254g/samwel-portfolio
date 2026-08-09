@@ -27,7 +27,15 @@ export async function POST(request: NextRequest) {
       submittedAt: new Date().toISOString(),
     });
 
-    await resend.emails.send({
+    if (!process.env.RESEND_API_KEY) {
+      console.error('[v0] RESEND_API_KEY is not set in environment variables');
+      return NextResponse.json(
+        { error: 'Email service not configured' },
+        { status: 500 }
+      );
+    }
+
+    const { data, error: resendError } = await resend.emails.send({
       from: 'SAMWEL Portfolio <onboarding@resend.dev>',
       to: NOTIFY_EMAIL,
       replyTo: email,
@@ -58,6 +66,16 @@ export async function POST(request: NextRequest) {
         </div>
       `,
     });
+
+    if (resendError) {
+      console.error('[v0] Resend API error:', resendError);
+      return NextResponse.json(
+        { error: 'Failed to send email', details: resendError },
+        { status: 500 }
+      );
+    }
+
+    console.log('[v0] Email sent successfully:', data);
 
     return NextResponse.json(
       { success: true, message: 'Contact submission received' },

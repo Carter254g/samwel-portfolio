@@ -13,7 +13,7 @@ export function Footer() {
           <div>
             <h3 className="text-xl font-bold uppercase tracking-wider mb-4">SAMWEL</h3>
             <p className="text-muted-foreground text-sm">
-              Professional photographer with 5+ years of experience specializing in portrait, landscape, and commercial photography.
+              Professional photographer with 5+ years of experience specializing in event and concert coverage.
             </p>
           </div>
 

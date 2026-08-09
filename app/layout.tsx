@@ -8,7 +8,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: 'Photography Portfolio - SAMWEL',
-  description: 'Professional photographer with 5+ years of experience. Specializing in portrait, landscape, and commercial photography. Over 100 projects completed.',
+  description: 'Professional photographer with 5+ years of experience. Specializing in event and concert coverage. Over 100 projects completed.',
   generator: 'v0.app',
   icons: {
     icon: [

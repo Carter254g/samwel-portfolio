@@ -1,31 +1,13 @@
 'use client';
 
-import { Heart, Camera, Box, Video, ArrowRight } from 'lucide-react';
+import { Video, ArrowRight } from 'lucide-react';
 
 const services = [
   {
-    icon: Heart,
-    title: 'Portrait',
-    description:
-      'Capturing the essence and personality of individuals through artful headshots, family portraits, and personal branding sessions.',
-  },
-  {
-    icon: Camera,
-    title: 'Landscape',
-    description:
-      'Discovering the beauty of natural scenery, from dramatic vistas to serene environments, with exceptional clarity and depth.',
-  },
-  {
-    icon: Box,
-    title: 'Commercial',
-    description:
-      'High-quality product, corporate, and brand imagery built to elevate marketing campaigns and convert customers.',
-  },
-  {
     icon: Video,
-    title: 'Events',
+    title: 'Event & Concert Coverage',
     description:
-      'Comprehensive coverage that documents the emotions and moments that matter, from corporate to personal occasions.',
+      'Comprehensive coverage that documents the energy and emotion of live events and concerts, capturing every key moment as it happens.',
   },
 ];
 
@@ -50,8 +32,8 @@ export function ServicesSection() {
           </p>
         </div>
 
-        {/* Services Grid - 4 in a line on desktop */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 max-w-md gap-px bg-border border border-border">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
@@ -78,13 +60,6 @@ export function ServicesSection() {
               </div>
             );
           })}
-        </div>
-
-        {/* View All Services Button */}
-        <div className="flex justify-center mt-16">
-          <button className="px-8 py-3 border border-foreground text-foreground hover:bg-foreground hover:text-background transition-colors uppercase text-xs tracking-[0.2em] font-medium">
-            View All Services
-          </button>
         </div>
       </div>
     </section>

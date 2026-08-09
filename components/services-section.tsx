@@ -53,10 +53,13 @@ export function ServicesSection() {
                 <p className="text-sm text-muted-foreground leading-relaxed mb-8 flex-grow">
                   {service.description}
                 </p>
-                <button className="inline-flex items-center text-xs uppercase tracking-[0.2em] font-medium text-foreground self-start">
+                <a
+                  href="#portfolio"
+                  className="inline-flex items-center text-xs uppercase tracking-[0.2em] font-medium text-foreground self-start"
+                >
                   <span className="border-b border-foreground pb-0.5">View Service</span>
                   <ArrowRight className="ml-2 w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                </button>
+                </a>
               </div>
             );
           })}

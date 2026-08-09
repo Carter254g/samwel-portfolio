@@ -140,10 +140,7 @@ export function ContactSection() {
                 className="w-full bg-background border border-border px-4 py-3 text-foreground focus:outline-none focus:border-foreground transition-colors"
               >
                 <option value="">Select a service</option>
-                <option value="wedding">Wedding Session</option>
-                <option value="studio">Studio Shooting</option>
-                <option value="product">Product Shoot</option>
-                <option value="video">Video Shooting</option>
+                <option value="event">Event & Concert Coverage</option>
               </select>
             </div>
           </div>

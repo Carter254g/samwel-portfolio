@@ -50,22 +50,7 @@ export function Footer() {
             <ul className="space-y-2 text-muted-foreground text-sm">
               <li>
                 <a href="#services" className="hover:text-foreground transition-colors">
-                  Wedding Photography
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="hover:text-foreground transition-colors">
-                  Studio Sessions
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="hover:text-foreground transition-colors">
-                  Product Photography
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="hover:text-foreground transition-colors">
-                  Video Production
+                  Event & Concert Coverage
                 </a>
               </li>
             </ul>

@@ -66,6 +66,11 @@ const portfolioItems = [
   { id: 63, title: 'Live Event Coverage', category: 'events', image_url: '/images/portfolio/event-63.jpg' },
 ];
 
+// Curated subset for the sliding showcase strip
+const sliderIds = [1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 40, 43, 46, 49, 52, 55, 58, 61];
+const sliderItems = portfolioItems.filter((item) => sliderIds.includes(item.id));
+const sliderLoop = [...sliderItems, ...sliderItems]; // duplicate for seamless loop
+
 export function PortfolioSection() {
   return (
     <section id="portfolio" className="py-24 bg-background">
@@ -79,7 +84,30 @@ export function PortfolioSection() {
             A curated selection of recent event and concert coverage, capturing the energy of live moments as they happen.
           </p>
         </div>
+      </div>
 
+      {/* Auto-sliding showcase strip */}
+      <div className="relative w-full overflow-hidden mb-16">
+        <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+        <div className="portfolio-marquee-track flex gap-4">
+          {sliderLoop.map((item, index) => (
+            <div
+              key={`${item.id}-${index}`}
+              className="relative flex-shrink-0 w-64 h-80 md:w-80 md:h-96 overflow-hidden bg-card group"
+            >
+              <img
+                src={item.image_url}
+                alt={item.title}
+                loading="lazy"
+                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {portfolioItems.map((item) => (
             <div key={item.id} className="group relative overflow-hidden cursor-pointer bg-card">
@@ -99,6 +127,24 @@ export function PortfolioSection() {
           ))}
         </div>
       </div>
+
+      <style>{`
+        .portfolio-marquee-track {
+          width: max-content;
+          animation: portfolio-marquee 60s linear infinite;
+        }
+        .portfolio-marquee-track:hover {
+          animation-play-state: paused;
+        }
+        @keyframes portfolio-marquee {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
     </section>
   );
 }

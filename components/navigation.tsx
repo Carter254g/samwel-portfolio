@@ -43,9 +43,14 @@ export function Navigation() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <button className="px-6 py-2 border border-foreground text-foreground hover:bg-foreground hover:text-background transition-colors uppercase text-sm tracking-wide">
+            <a
+              href="https://calendar.app.google/mCsuXC2TRGVKpzvD6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-2 border border-foreground text-foreground hover:bg-foreground hover:text-background transition-colors uppercase text-sm tracking-wide"
+            >
               Book Now
-            </button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -73,9 +78,15 @@ export function Navigation() {
                   {link.label}
                 </a>
               ))}
-              <button className="w-full text-left px-3 py-2 border border-foreground text-foreground hover:bg-foreground hover:text-background transition-colors uppercase text-sm tracking-wide mt-2">
+              <a
+                href="https://calendar.app.google/mCsuXC2TRGVKpzvD6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-left px-3 py-2 border border-foreground text-foreground hover:bg-foreground hover:text-background transition-colors uppercase text-sm tracking-wide mt-2"
+                onClick={() => setIsOpen(false)}
+              >
                 Book Now
-              </button>
+              </a>
             </div>
           </div>
         )}
